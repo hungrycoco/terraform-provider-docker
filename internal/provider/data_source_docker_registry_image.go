@@ -55,7 +55,7 @@ func dataSourceDockerRegistryImageRead(ctx context.Context, d *schema.ResourceDa
 		// We are setting default values for the authConfig here.
 		authConfig.Username = ""
 		authConfig.Password = ""
-		authConfig.ServerAddress = "https://" + pullOpts.Registry
+		authConfig.ServerAddress = "http://" + pullOpts.Registry
 	}
 
 	insecureSkipVerify := d.Get("insecure_skip_verify").(bool)
